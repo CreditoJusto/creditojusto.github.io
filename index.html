@@ -15,55 +15,65 @@ body, html {
 
 ::-webkit-selection {
   background-color: rgba(0, 147, 254, 0.2); }
+
     
-    
-    
+h1, h2 {
+    color: white;
+    font-family: 'Merriweather', serif, monospace;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 0.1;
+}    
     .bgimg {
     background: -webkit-linear-gradient(0deg, #3CD5FF, #007AFF);
     background: -o-linear-gradient(0deg, #3CD5FF, #007AFF);
     background: -moz-linear-gradient(0deg, #3CD5FF, #007AFF);
     background: linear-gradient(100deg, #3CD5FF, #007AFF); 
     background-color: #1494FB;
-    height: 50%;
-    background-position: center;
+    height: 100%;
+    width:50%;
+    top:0;
+    bottom:0;
     background-size: cover;
-    position: relative;
-    color: white;
-    font-family: 'Merriweather', serif, monospace;
-    font-size: 10px;
-}
-    
-
-.middle {
     position: absolute;
-    top: 0px;
-    left: 50%;
-    text-align: Center;
+    left:0
+        
 }
 
-</style>
     
+/* Aqui eu falo onde eu quero que o bloco das perguntes fique e os tamanhos etc...*/    
+        
+.typeform-widget{
+        width:50%;
+        height:100%;
+        right:0;
+        top:0;
+        bottom:0;
+        position: absolute;
+        opacity: 50%
+    }    
+    
+</style>
+
+    
+<!-- Titulo da Pagina-->     
 <head>
-        <title>SCASH</title>
+        <title>Crédito Justo</title>
     </head>     
 <body>  
    
+<!-- Code em JS que vai colocar o questionario na nossa pagina-->    
+<div class="typeform-widget" data-url="https://wchallenge.typeform.com/to/KUjITu" data-transparency="50" data-hide-headers=true data-hide-footer=true>
+</div> 
+<script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() 
+</script>   
+<div style="font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;"> <a href="https://admin.typeform.com/signup?utm_campaign=KUjITu&utm_source=typeform.com-12386298-Pro&utm_medium=typeform&utm_content=typeform-embedded-poweredbytypeform&utm_term=EN" style="color: #999" target="_blank"></a> 
+</div>
+      
     
 <div class="bgimg">
-  <div class="middle">
-    <h1>Crédito mais justo, sabe o que é?</h1>
-        <h2>Ele analisa fatores como caráter, o momento de vida</h2>
-        <h2>Não o seu histórico financeiro</h2>
-        <h2>Consegue nos ajudar com uma pesquisa</h2>
-        <h2>e concorrer a um vale presente de R$ 100,00 da Livraria Cultura?</h2>
-    <p id="demo" style="font-size:30px"></p>
-  </div>
-</div>
- 
+</div> 
     
-  
-    
-
 
 </body>
 </html>
