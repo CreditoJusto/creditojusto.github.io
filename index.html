@@ -1,76 +1,65 @@
-<!DOCTYPE html>
-<html>
-<style>
-body, html {
-    height: 100%;
-    margin: 0;
-}
+<html lang="en">
     
     
-::selection {
-  background-color: rgba(0, 147, 254, 0.2); }
-
-::-moz-selection {
-  background-color: rgba(0, 147, 254, 0.2); }
-
-::-webkit-selection {
-  background-color: rgba(0, 147, 254, 0.2); }
-
-    
-h1, h2 {
-    color: white;
-    font-family: 'Merriweather', serif, monospace;
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 0.1;
-}    
- .bgimg {
-    background: -webkit-linear-gradient(0deg, #3CD5FF, #007AFF);
-    background: -o-linear-gradient(0deg, #3CD5FF, #007AFF);
-    background: -moz-linear-gradient(0deg, #3CD5FF, #007AFF);
-    background: linear-gradient(100deg, #3CD5FF, #007AFF); 
-    background-color: #1494FB;
-    height: 50%;
-    width:100%;
-    top:0;
-    background-size: cover;
-    position: absolute;
-    left:0
-        
+<style type="text/css">
+   
+body {
+  background: url('https://www.toptal.com/designers/subtlepatterns/patterns/restaurant_icons.png');
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
 }
 
-    
-/* Aqui eu falo onde eu quero que o bloco das perguntes fique e os tamanhos etc...*/    
-        
-.typeform-widget{
-        width:100%;
-        height:50%;
-        bottom:0;
-        position: absolute;
-        opacity: 50%
-    }        
+h1 {
+  font-size: 50px;
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  width: 600px;
+}
+
+.container p, .container h2 {
+  text-align: center;
+}
     
 </style>
 
-    
-<!-- Titulo da Pagina-->     
 <head>
-        <title>Crédito Justo</title>
-    </head>     
-<body>  
-   
-<!-- Code em JS que vai colocar o questionario na nossa pagina-->    
-<div class="typeform-widget" data-url="https://wchallenge.typeform.com/to/KUjITu" data-transparency="50" data-hide-headers=true data-hide-footer=true>
-</div> 
-<script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() 
-</script>   
-<div style="font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;"> <a href="https://admin.typeform.com/signup?utm_campaign=KUjITu&utm_source=typeform.com-12386298-Pro&utm_medium=typeform&utm_content=typeform-embedded-poweredbytypeform&utm_term=EN" style="color: #999" target="_blank"></a> 
-</div>
-      
-    
-<div class="bgimg">
-</div> 
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>[Typeform] Widget embed API example</title>
+</head>
 
+<body>
+  <div class="container">
+    <h1>Pesquisa de Crédito</h1>
+    <h2>Gostariamos de fazer uma pesquisa de crédito com voce!</h2>
+        
+    <!-- This is the DOM element that will contain your embedded typeform -->
+    <div id="my-embedded-typeform"
+         style="width: 100%; height: 300px;"></div>
+
+    <p>O pug da sorte fica muito grato por voces terem ajudado com essa pesquisa!</p>
+  </div>
+  <script src="https://embed.typeform.com/embed.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", function() {
+      var el = document.getElementById("my-embedded-typeform");
+      
+      // When instantiating a widget embed, you must provide the DOM element
+      // that will contain your typeform, the URL of your typeform, and your
+      // desired embed settings
+      window.typeformEmbed.makeWidget(el, "https://wchallenge.typeform.com/to/KUjITu", {
+        hideFooter: true,
+        hideHeaders: true,
+        opacity: 0
+      });
+    });
+  </script>
 </body>
+
 </html>
+
+
+
